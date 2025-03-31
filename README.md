@@ -1,1 +1,3 @@
 # CelestePixelArtGenerator
+
+(I'M GONNA MAKE A VIDEO TUTORIAL LIKE, TODAY DON'T WORRY)
