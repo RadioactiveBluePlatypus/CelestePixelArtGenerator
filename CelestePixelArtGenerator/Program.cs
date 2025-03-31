@@ -24,6 +24,8 @@ if (backgroundTile.Length != 1)
 
 string jumpthru = "wood";
 
+int expectedColorCount = 3;
+
 Bitmap bitmap = new Bitmap(Path);
 
 HashSet<Color> colors = new HashSet<Color>();
@@ -45,6 +47,7 @@ for (int i = 0; i < colorsList.Count;i++)
     if ((colorsList[i].R == 255 && colorsList[i].G == 0 && colorsList[i].B == 0))
     {
         colorsList.Remove(colorsList[i]);
+        expectedColorCount++;
         break;
     }   
 }
@@ -54,6 +57,7 @@ for (int i = 0; i < colorsList.Count; i++)
     if ((colorsList[i].R == 255 && colorsList[i].G == 255 && colorsList[i].B == 0))
     {
         colorsList.Remove(colorsList[i]);
+        expectedColorCount++;
         Console.WriteLine("Jump Thrus:\r\n- wood\r\n- dream\r\n- temple\r\n- templeB\r\n- cliffside\r\n- reflection\r\n- core\r\n- moon");
         jumpthru = Ask("Enter the jump thru texture: ");
 
@@ -82,13 +86,13 @@ for (int i = 0; i < 3; i++)
 
 colorsList = sortedColorsList;
 
-if (colorsList.Count != 3)
+if (colors.Count != expectedColorCount)
     throw (new Exception("Image must have exactly 3 colors (Excluding red and yellow)"));
 
 int FGRed = 211;
 int BGRed = 79;
 
-StreamWriter sw = new StreamWriter(@"..\..\..\output.txt");
+StreamWriter sw = new StreamWriter(@"output.txt");
 try
 {
     using (sw)
@@ -187,10 +191,13 @@ finally
 
 Console.WriteLine($"IMAGE GENERATED! ({bitmap.Width}x{bitmap.Height})");
 
-if (File.Exists(@"..\..\..\output.txt"))
+if (File.Exists(@"output.txt"))
 {
-    Process.Start("notepad.exe", @"..\..\..\output.txt");
+    Process.Start("notepad.exe", @"output.txt");
 }
+
+Console.WriteLine("Press any key to continue...");
+Console.ReadKey();
 
 string Ask(string message)
 {
