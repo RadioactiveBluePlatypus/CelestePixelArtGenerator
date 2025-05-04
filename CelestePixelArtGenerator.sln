@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CelestePixelArtGenerator", "CelestePixelArtGenerator\CelestePixelArtGenerator.csproj", "{A30998E6-8977-4055-AB0A-2C9A1CEC04AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CelestePixelArtGenerator", "CelestePixelArtGenerator\CelestePixelArtGenerator.csproj", "{A30998E6-8977-4055-AB0A-2C9A1CEC04AC}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CelestePixelInstaller.Installer", "CelestePixelInstaller.Installer\CelestePixelInstaller.Installer.vdproj", "{900B68A1-2214-4E27-9EE7-53A1EAE3EA8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{A30998E6-8977-4055-AB0A-2C9A1CEC04AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A30998E6-8977-4055-AB0A-2C9A1CEC04AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A30998E6-8977-4055-AB0A-2C9A1CEC04AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{900B68A1-2214-4E27-9EE7-53A1EAE3EA8E}.Debug|Any CPU.ActiveCfg = Debug
+		{900B68A1-2214-4E27-9EE7-53A1EAE3EA8E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

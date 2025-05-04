@@ -1,12 +1,11 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v6.0/win-x64",
+    "name": ".NETCoreApp,Version=v6.0",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v6.0": {},
-    ".NETCoreApp,Version=v6.0/win-x64": {
+    ".NETCoreApp,Version=v6.0": {
       "CelestePixelArtGenerator/1.0.0": {
         "dependencies": {
           "System.Drawing.Common": "8.0.6"
@@ -17,7 +16,15 @@
       },
       "Microsoft.Win32.SystemEvents/8.0.0": {
         "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        },
+        "runtimeTargets": {
           "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.23.53103"
           }

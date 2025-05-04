@@ -94,7 +94,10 @@ try
     int FGRed = 211;
     int BGRed = 79;
 
-    StreamWriter sw = new StreamWriter(@"output.txt");
+    string appdataDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\CelestePixelArtGenerator\";
+
+    Directory.CreateDirectory(appdataDir);
+    StreamWriter sw = new StreamWriter(appdataDir + @"output.txt");
     try
     {
         using (sw)
@@ -193,13 +196,13 @@ try
 
     Console.WriteLine($"IMAGE GENERATED! ({bitmap.Width}x{bitmap.Height})");
 
-    if (File.Exists(@"output.txt"))
+    if (File.Exists(appdataDir + @"output.txt"))
     {
-        Process.Start("notepad.exe", @"output.txt");
+        Process.Start("notepad.exe", appdataDir + @"output.txt");
     }
 
     Console.WriteLine("Press any key to continue...");
-    Console.ReadKey();
+    Console.ReadKey(true);
 
     string Ask(string message)
     {
@@ -211,5 +214,5 @@ catch (Exception ex)
 {
     Console.WriteLine(ex);
     Console.WriteLine("Press any key to continue...");
-    Console.ReadKey();
+    Console.ReadKey(true);
 }
