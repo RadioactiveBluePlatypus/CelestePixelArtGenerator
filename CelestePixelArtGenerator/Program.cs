@@ -8,7 +8,15 @@ try
     string Path = Ask("Path: ");
     Path = Path.Trim('\"');
 
-    Console.WriteLine(Path);
+    Bitmap bitmap = new Bitmap(1,1);
+    try
+    {
+        bitmap = new Bitmap(Path);
+    }
+    catch (Exception ex)
+    {
+        throw (new Exception("The file that you have tried to load is either not a valid path or is the wrong file format. Please enter the path to a PNG image."));
+    }
 
     Console.WriteLine("Foreground Tiles:\r\n1: Dirt\r\n3: Snow\r\n4: Girder\r\n5: Tower\r\n6: Stone\r\n7: Cement\r\n8: Rock\r\n9: Wood\r\na: Wood Stone Edges\r\nb: Cliffside\r\nc: Pool Edges\r\nd: Temple A\r\ne: Temple B\r\nf: Cliffside Alt\r\ng: Reflection\r\nG: Reflection Alt\r\nh: Grass\r\ni: Summit\r\nj: Summit No Snow\r\nk: Core\r\nl: Deadgrass\r\nm: Lostlevels (Default)\r\nn: Scifi\r\nz: Template");
     string foregroundTile = Ask("Enter your chosen foreground tile id (Case sensitive): ");
@@ -28,7 +36,7 @@ try
 
     int expectedColorCount = 3;
 
-    Bitmap bitmap = new Bitmap(Path);
+    
 
     HashSet<Color> colors = new HashSet<Color>();
 
