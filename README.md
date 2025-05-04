@@ -10,6 +10,9 @@
 5. Download the [Celeste Pixel Art Generator Installer](https://www.dropbox.com/scl/fi/jgx647bm8p4n07jabqhr7/CelestePixelInstaller.Installer.zip?rlkey=p9gb9wwxr5r5yh5w7gdn0odq6&dl=0), export it and run setup.exe.
 6. Run the program. (A shortcut should've appeared on your desktop.)
 7. Paste your image's path into the input field. (Quotation marks will be automatically truncated)
+
+**WARNING: This only works with PNG files.**
+
 8. Select your foreground and background tiles. Do not type their name, but only their ID. This also works with modded tiles.
 9. A text file named "Output.txt" should've opened itself. Select everything with CTRL+A and copy with CTRL+C.
 10. In Lönn, create a new room with the dimensions of your picture. (The program also displays the dimensions of the image.)
